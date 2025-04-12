@@ -5,3 +5,15 @@ def mark_complete(tasks, index):
         print("Task marked complete!")
     else:
         print("Invalid task number.")
+
+def add_task(tasks):
+    """Add a new task to the to-do list with a priority."""
+    task = input("Enter a new task: ")
+    priority = input("Enter priority (High/Medium/Low): ")
+    priority = priority.capitalize()
+    
+    # You might store tasks as dictionaries for clarity
+    new_task = {"title": task, "priority": priority, "completed": False}
+    tasks.append(new_task)
+    
+    print(f"Task '{task}' added with priority '{priority}'!")
